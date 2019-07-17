@@ -9,17 +9,23 @@ Instala rápidamente un ambiente de desarrollo local para trabajar con WordPress
 
 ### Configurar el ambiente de desarrollo
 
-* Clonar el repositorio. 
-* Instalar el contenedor Docker:
-  `docker-compose up -d`
-* Instalar Wordpress:
-  `wp core download --path=www/ --locale=es_ES`
+Instalar el contenedor Docker:
+```zsh
+docker-compose up -d
+```
+
+Instalar Wordpress:
+```zsh
+wp core download --path=www/ --locale=es_ES
+```
 
 ### Comandos disponibles
 
-* `docker-compose start` iniciar el ambiente de desarrollo.
-* `docker-compose stop` detener el ambiente de desarrollo.
-* `docker-compose down` detener y eliminar el ambiente de desarrollo.
+```zsh
+docker-compose start    # Iniciar el ambiente de desarrollo
+docker-compose stop     # Detener el ambiente de desarrollo
+docker-compose down     # Detener y eliminar el ambiente de desarrollo.
+```
 
 ### Estructura de Archivos
 
