@@ -1,0 +1,21 @@
+### Wordpress ###
+www/*.php
+www/*.txt
+www/*.html
+www/.htaccess
+www/wp-admin/
+www/wp-includes/
+www/wp-content/*.php
+www/wp-content/backup*
+www/wp-content/cache/
+www/wp-content/languages/
+www/wp-content/upgrade/
+www/wp-content/uploads/
+www/wp-content/plugins/
+www/wp-content/themes/*.php
+www/wp-content/themes/twenty*
+www/wp-content/debug.log
+
+### Hidden files ###
+*.DS_Store
+*Thumbs.db
