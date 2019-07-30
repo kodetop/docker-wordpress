@@ -1,4 +1,4 @@
-### Wordpress ###
+# Wordpress
 www/*.php
 www/*.txt
 www/*.html
@@ -16,6 +16,6 @@ www/wp-content/themes/*.php
 www/wp-content/themes/twenty*
 www/wp-content/debug.log
 
-### Hidden files ###
+# Hidden files
 *.DS_Store
 *Thumbs.db
