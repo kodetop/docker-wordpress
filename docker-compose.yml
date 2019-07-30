@@ -2,22 +2,28 @@ version: '3'
 
 services:
   mysql:
-    image: mysql:5.6
-    container_name: server-mysql
+    build:
+      context: ./docker/mysql
+      args:
+        mysql_version: ${MYSQL_VERSION}
+    container_name: wordpress-mysql
     environment:
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: root
-      MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3306:3306"
     restart: always
 
   php:
-    build: ./docker/php
-    container_name: server-php
+    build:
+      context: ./docker/php
+      args:
+        php_version: ${PHP_VERSION}
+    container_name: wordpress-php
     ports:
-      - "80:80"
+      - "${PHP_PORT}:80"
     volumes:
       - ./www:/var/www/html
     links:
